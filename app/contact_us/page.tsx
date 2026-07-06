@@ -14,17 +14,17 @@ const staggerContainer: Variants = {
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 60, damping: 15 } }
+  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 60, damping: 15 } }
 };
 
 const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.9 },
-  show: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 80, damping: 15 } }
+  show: { opacity: 1, scale: 1, transition: { type: "spring" as const, stiffness: 80, damping: 15 } }
 };
 
 const receiptVariant: Variants = {
   hidden: { opacity: 0, rotateX: 30, y: 40, scale: 0.9 },
-  show: { opacity: 1, rotateX: 0, y: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 14 } }
+  show: { opacity: 1, rotateX: 0, y: 0, scale: 1, transition: { type: "spring" as const, stiffness: 60, damping: 14 } }
 };
 
 interface FAQItem {

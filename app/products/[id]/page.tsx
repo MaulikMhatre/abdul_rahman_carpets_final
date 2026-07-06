@@ -15,13 +15,13 @@ const staggerContainer = {
 
 const itemReveal = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
-  show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 70, damping: 15 } }
+  show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring" as const, stiffness: 70, damping: 15 } }
 };
 
 const pageFade = {
   initial: { opacity: 0, filter: "blur(10px)" },
   animate: { opacity: 1, filter: "blur(0px)", transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const } },
-  exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeIn" } }
+  exit: { opacity: 0, filter: "blur(10px)", transition: { duration: 0.4, ease: "easeIn" as const } }
 };
 
 export default function ProductDetailsPage() {
