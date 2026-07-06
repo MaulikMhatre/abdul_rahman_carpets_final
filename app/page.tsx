@@ -163,7 +163,7 @@ export default function HomePage() {
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={() => { isDragging.current = false; startSliderInterval(); }}
-        style={{ touchAction: 'pan-y' }}
+        style={{ touchAction: 'none' }}
       >
         {HERO_SLIDES.map((slideUrl, idx) => (
           <div
